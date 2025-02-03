@@ -1,0 +1,69 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tutor Profile</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <link rel="stylesheet" href="{% static 'css/stylePages.css' %}">
+   <link rel="stylesheet" href="{% static 'css/teacher_private.css' %}">
+</head>
+<body>
+   <section class="teacher-profile">
+      <h1 class="heading">Profile Details</h1>
+      <div class="details">
+         <div class="tutor">
+            <img src="{{ tutor.image.url }}" alt="">
+            <h3>{{ tutor.name }}</h3>
+            <span>{{ tutor.role }}</span>
+         </div>
+         <div class="flex">
+            <p>Total Playlists: <span>{{ tutor.courses.count }}</span></p>
+            <p>Total Videos: <span>{{ videos_count }}</span></p>
+            <p>Total Likes: <span>{{ likes_count }}</span></p>
+            <p>Total Comments: <span>{{ comments_count }}</span></p>
+         </div>
+      </div>
+   </section>
+
+   <section class="courses">
+      <h1 class="heading">Our Courses</h1>
+      <div class="box-container">
+         {% for course in courses %}
+         <div class="box">
+            <div class="thumb">
+               <img src="{{ course.thumbnail.url }}" alt="">
+               <span>{{ course.videos_count }} videos</span>
+            </div>
+            <h3 class="title">{{ course.title }}</h3>
+            <a href="playlist.html" class="inline-btn">View Playlist</a>
+            <form action="{% url 'teacher_profile' %}" method="post">
+               {% csrf_token %}
+               <input type="hidden" name="course_id" value="{{ course.id }}">
+               <button type="submit" name="delete_course" class="delete">Delete</button>
+            </form>
+         </div>
+         {% endfor %}
+      </div>
+   </section>
+
+   <div class="media_container">
+      <button class="create_course">Create New Course</button>
+      <form action="{% url 'teacher_profile' %}" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+         {{ course_form.as_p }}
+         <button type="submit" name="add_course" class="create_course2">Add</button>
+      </form>
+   </div>
+
+   {% include "footer.html" %}
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/teacher_private.js' %}"></script>
+<script src="{% static 'js/addCourses.js' %}"></script>
+{% endblock %}

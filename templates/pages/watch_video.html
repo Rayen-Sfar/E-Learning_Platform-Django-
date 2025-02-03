@@ -1,0 +1,54 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css\stylePages.css' %}">
+<section class="watch-video">
+   <div class="video-container">
+      <div class="video">
+         <video src="{{ video.video_file.url }}" controls poster="{{ video.poster_image.url }}" id="video"></video>
+      </div>
+      <h3 class="title">{{ video.title }}</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>{{ video.date_posted }}</span></p>
+         <p class="date"><i class="fas fa-heart"></i><span>{{ video.likes }} likes</span></p>
+      </div>
+      <div class="tutor">
+         <img src="{{ video.tutor.image.url }}" alt="">
+         <div>
+            <h3>{{ video.tutor.name }}</h3>
+            <span>{{ video.tutor.role }}</span>
+         </div>
+      </div>
+      <form action="" method="post" class="flex">
+         {% csrf_token %}
+         <a href="{% url 'playlist' %}" class="inline-btn">view playlist</a>
+         <button type="submit" name="like" class="inline-btn"><i class="far fa-heart"></i><span>like</span></button>
+      </form>
+      <p class="description">
+         {{ video.description }}
+      </p>
+   </div>
+</section>
+
+<section class="comments">
+   <h1 class="heading">{{ comments.count }} comments</h1>
+   <form action="" method="post" class="add-comment">
+      {% csrf_token %}
+      <h3>add comments</h3>
+      {{ comment_form.as_p }}
+      <input type="submit" value="add comment" class="inline-btn" name="add_comment">
+   </form>
+   <h1 class="heading">user comments</h1>
+   <div class="box-container">
+      {% for comment in comments %}
+         <div class="box">
+            <p class="user"><strong>{{ comment.user.username }}</strong> said:</p>
+            <p class="content">{{ comment.content }}</p>
+            <p class="date">{{ comment.created_at }}</p>
+         </div>
+      {% endfor %}
+   </div>
+</section>
+{% endblock %}
+{% include "footer.html" %}
+

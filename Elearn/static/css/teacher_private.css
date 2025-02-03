@@ -1,0 +1,197 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.add-media{
+  display: flex;
+  align-items: center;
+  background: #d2cbcb;
+}
+/* Import Google font - Poppins */
+
+
+::selection{
+  color: #fff;
+  background: #f2ab69;
+}
+.wrapper{
+  width: 456px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  color: #f2ab69;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #f2ab69;
+}
+form :where(i, p){
+  color: #f2ab69;
+}
+form i{
+  font-size: 50px;
+}
+form p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .row{
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+  color: #f2ab69;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #f2ab69;
+  border-radius: inherit;
+}
+.uploaded-area{
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+
+.media_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.add_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.add_text input{
+    margin-bottom: 12px;
+    height: 40px;
+    width: 455px;
+    padding-left: 15px;
+}
+.media_container h1{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.create_course{
+    height: 40px;
+    width: 455px;
+    color: #fff;
+    background: #eb600a;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.create_course:hover{
+  border: 2px solid #eb600a;
+  background: #fff;
+  color: #eb600a;
+}
+.create_course2{
+  height: 40px;
+  width: 455px;
+  color: #fff;
+  background: #eb600a;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding-left: 200px;
+  padding-top: 8px;
+}
+.create_course2:hover{
+border: 2px solid #eb600a;
+background: #fff;
+color: #eb600a;
+}
+.delete{
+    width: 53%;
+    height: 50px;
+    border-radius: 6px;
+    background: #eb600a;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+.delete:hover{
+    background: rgb(119, 93, 82);
+}
+.add_text{
+  display: none;
+}
+.add-media{
+  display: none;
+}
+.create_course2{
+  display: none;
+}

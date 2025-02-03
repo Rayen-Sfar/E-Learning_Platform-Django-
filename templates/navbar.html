@@ -1,0 +1,36 @@
+{% load static %}
+ <link rel="stylesheet" href="{% static 'css/styleHome.css' %}">
+ <link rel="stylesheet" href="{% static 'font-awesome/4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome/5.15.2/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome/6.3.0/css/all.min.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-o.css" rel="stylesheet">
+<header>
+     <nav>
+        <div class="logo">
+            <img src="{% static 'images/capture' %}" alt="Logo">
+            <h2>EDUCATION</h2>
+        </div>
+        <div class="align">
+            <div class="search">
+                <input type="text" placeholder="search...">
+                <button class="but1"><i class="fa fa-search"></i></button>
+            </div>
+            <ul>
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'courses' %}">Courses</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="cart"><a href="#"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></div>
+            <div class="user"><i class="fa fa-user" style="font-size:48px;color:orangered"></i></div>
+        </div>
+    </nav>
+</header>
+{% block content %}
+{% endblock %}
+<script src="{% static 'js/bestCourse.js' %}"></script>
+<script src="{% static 'js/bestTeacherCode.js' %}"></script>
+

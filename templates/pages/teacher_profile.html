@@ -1,0 +1,93 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tutor Profile</title>
+
+   <!-- Font Awesome CDN link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS file link -->
+   <link rel="stylesheet" href="{% static 'css/stylePages.css' %}">
+
+</head>
+<body>
+
+<section class="teacher-profile">
+
+   <h1 class="heading">Profile Details</h1>
+
+   <div class="details">
+      <div class="tutor">
+         <img src="{% static 'images/pic-2.jpg' %}" alt="">
+         <h3>John Deo</h3>
+         <span>Developer</span>
+      </div>
+      <div class="flex">
+         <p>Total Playlists: <span>4</span></p>
+         <p>Total Videos: <span>18</span></p>
+         <p>Total Likes: <span>1208</span></p>
+         <p>Total Comments: <span>52</span></p>
+      </div>
+   </div>
+
+   <section class="courses">
+
+      <h1 class="heading">Our Courses</h1>
+
+      <div class="box-container">
+
+         <div class="box">
+            <div class="thumb">
+               <img src="{% static 'images/thumb-1.png' %}" alt="">
+               <span>10 videos</span>
+            </div>
+            <h3 class="title">Complete HTML Tutorial</h3>
+            <a href="{% url 'playlist' %}" class="inline-btn">View Playlist</a>
+         </div>
+
+         <div class="box">
+            <div class="thumb">
+               <img src="{% static 'images/thumb-2.png' %}" alt="">
+               <span>10 videos</span>
+            </div>
+            <h3 class="title">Complete CSS Tutorial</h3>
+            <a href="{% url 'playlist' %}" class="inline-btn">View Playlist</a>
+         </div>
+
+         <div class="box">
+            <div class="thumb">
+               <img src="{% static 'images/thumb-3.png' %}" alt="">
+               <span>10 videos</span>
+            </div>
+            <h3 class="title">Complete JavaScript Tutorial</h3>
+            <a href="{% url 'playlist' %}" class="inline-btn">View Playlist</a>
+         </div>
+
+         <div class="box">
+            <div class="thumb">
+               <img src="{% static 'images/thumb-4.png' %}" alt="">
+               <span>10 videos</span>
+            </div>
+            <h3 class="title">Complete Bootstrap Tutorial</h3>
+            <a href="{% url 'playlist' %}" class="inline-btn">View Playlist</a>
+         </div>
+
+      </div>
+   </section>
+</section>
+
+<!-- Custom JS file link -->
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/addCorses.js' %}"></script>
+
+</body>
+</html>
+{% endblock %}
+
+{% include "footer.html" %}

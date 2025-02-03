@@ -1,0 +1,281 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.logo img{
+    height: 80px;
+    width: 140px;
+}
+.logo{
+   margin-top: 30px;
+   animation: slideRight 1s ease forwards ;
+   margin-left: 20px;
+   margin-top:-5px ;
+}
+.logo h2{ 
+  height: 50px;
+  margin-left: 8px;  
+}
+header nav .align{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    margin: auto;
+    width: 80%;
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    cursor: pointer;
+
+}
+.category p{
+    margin-left: 20px;
+}
+
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+ul li{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ input{
+    height: 50px;
+    width:200px ;
+    padding: 15px;
+
+}
+.but1{
+    height: 50px;
+    width:30px ;
+    margin-left: -5px;
+    background-color: #fff;
+    color: orangered;
+   
+}
+.search{
+    margin-top: -10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: block;
+}
+footer .cart{
+    color: orangered;
+    margin-top: -10px;
+    margin-left: 15px;
+}
+nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    animation: slideLeft 0.5s ease forwards;
+    position: fixed;
+    z-index: 5;
+}
+.logo h2{
+    margin-top: -9px;
+    color: brown;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+header{
+    height:700px ;
+    width: 100%;
+    background-image: url("/Nouveau dossier/design/im/f0f8ff.png");
+}
+nav ul li a{
+    position: relative;
+}
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: orangered;
+    transition: 0.3s;
+}
+nav ul li a:hover::before {
+   width: 100%;
+}
+.active{
+    color: orangered;
+   
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform:translatey(0);
+        opacity: 1;
+    }
+}
+.middle {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    animation: slideRight 0.5s ease;
+}
+.but2{
+    height: 60px;
+    width: 180px;
+    border-radius:40px;
+    border: none;
+    background: rgb(246, 99, 46);
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.4s;
+    margin: 10px;
+}
+.but2:hover{
+    transform: scale(1.1);
+    background-color: rgb(172, 57, 15);
+}
+.but{
+    padding-top: 15px;
+}
+.cart:hover{
+    color: rgb(172, 57, 15);
+}
+.img1{
+    position: absolute;
+    left: 600px;
+    top: -180px;
+    transition: 2s ease;
+}
+.img1:hover{
+    transform: translateY(35px);
+}
+.user{
+    margin-left: -80px;
+    margin-top: -15px;
+}
+.user:hover{
+    color: rgb(172, 57, 15);
+}
+.box1 img{
+    height: 100px;
+    width: 90px;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: linear-gradient(url());
+}
+.box1{
+    background: rgba(234, 231, 231, 0.573);
+    position: relative;
+    height: 500px;
+    left :150px;
+    width: 460px;
+    border-radius: 10%;
+    padding: 100px;
+    margin-top: 50px;
+
+
+}
+.box1 p{
+    color: black;
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+.box1 h1{
+    color: rgb(228, 87, 35);
+    margin-left: -60px;
+}
+
+
+.box1 button{
+    height: 50px;
+    width: 200px;
+    background: rgba(235, 92, 40, 0.879);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 30px;
+}
+.box2{
+    background: rgba(234, 231, 231, 0.573);
+    position: relative;
+    height: 500px;
+    left :-5%;
+    width: 460px;
+    border-radius: 10%;
+    padding: 100px;
+    margin-top: 50px;
+
+}
+.box2 p{
+    color: black;
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+.box2 h1{
+    color: rgb(228, 87, 35);
+    margin-left: -60px;
+}
+
+
+.box2 button{
+    height: 50px;
+    width: 200px;
+    background: rgba(235, 92, 40, 0.879);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 30px;
+
+}
+.but3:hover{
+    border: 1px solid rgb(242, 73, 12);
+    color: rgb(242, 73, 12);
+    background: #fff;
+}
+.but button a{
+    text-decoration: none;
+    color: #fff;
+    font-size:17px ;
+    font-weight: 500;
+}
+.second{
+    background-image: url("/Nouveau dossier/design/im/f0f8ff.png");
+    background-repeat: none;
+    background-size: cover;
+    
+}
+.cart a{
+   text-decoration: none;
+   color: orangered;
+}
+

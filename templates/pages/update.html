@@ -1,0 +1,27 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block content %}
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3>Update Profile</h3>
+      <p>Update name</p>
+      <input type="text" name="name" placeholder="shaikh anas" maxlength="50" class="box">
+      <p>Update email</p>
+      <input type="email" name="email" placeholder="shaikh@gmail.com" maxlength="50" class="box">
+      <p>Previous password</p>
+      <input type="password" name="old_pass" placeholder="enter your old password" maxlength="20" class="box">
+      <p>New password</p>
+      <input type="password" name="new_pass" placeholder="enter your new password" maxlength="20" class="box">
+      <p>Confirm password</p>
+      <input type="password" name="c_pass" placeholder="confirm your new password" maxlength="20" class="box">
+      <p>Update pic</p>
+      <input type="file" name="profile_pic" accept="image/*" class="box">
+      <input type="submit" value="update profile" name="submit" class="btn">
+   </form>
+
+</section>
+{% endblock %}
+
+{% include "footer.html" %}
